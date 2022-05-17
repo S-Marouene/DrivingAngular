@@ -23,12 +23,13 @@ export class HeaderComponent implements OnInit {
     public token: TokenService,
     public authService: AuthService)
     {
-      this.authService.profileUser().subscribe((data: any) => {
-        this.UserProfile = data;
-      });
+
     }
 
   ngOnInit(): void {
+    this.authService.profileUser().subscribe((data: any) => {
+      this.UserProfile = data;
+    });
   }
 
   signOut() {

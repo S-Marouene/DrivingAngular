@@ -11,6 +11,8 @@ import { AuthInterceptor } from './shared/auth.interceptor';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
+import { ListUserComponent } from './components/ListUsers/list-user/list-user.component';
+import { MainComponentComponent } from './components/main/main-component/main-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,8 @@ import { MenuComponent } from './components/layout/menu/menu.component';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
+    ListUserComponent,
+    MainComponentComponent,
   ],
   imports: [
     BrowserModule,
