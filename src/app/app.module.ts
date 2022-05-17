@@ -8,12 +8,18 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/auth.interceptor';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { MenuComponent } from './components/layout/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
     UserProfileComponent,
+    HeaderComponent,
+    FooterComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
