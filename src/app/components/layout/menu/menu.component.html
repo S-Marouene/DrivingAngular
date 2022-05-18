@@ -34,29 +34,33 @@
       <ul class="vertical-nav-menu">
         <li class="app-sidebar__heading">Dashboards</li>
         <li>
-          <a href="index.html">
+          <a
+          [routerLink]="['/dashboard']"
+          routerLinkActive="active text-danger mm-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >
             <i class="metismenu-icon pe-7s-rocket"></i>
-            Dashboard Example 1
+            Dashboard
           </a>
         </li>
-        <li class="app-sidebar__heading">UI Components</li>
+        <li class="app-sidebar__heading">Users Information</li>
         <li>
-          <a href="#">
+          <a >
             <i class="metismenu-icon pe-7s-diamond"></i>
-            Elements
+            My information
             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
           </a>
           <ul>
             <li>
-              <a href="elements-buttons-standard.html">
+              <a [routerLink]="['/listuser']" routerLinkActive="active text-danger mm-active">
                 <i class="metismenu-icon"></i>
-                Buttons
+                List of users
               </a>
             </li>
             <li>
-              <a href="elements-dropdowns.html">
+              <a [routerLink]="['/profile']" routerLinkActive="active text-danger mm-active">
                 <i class="metismenu-icon">
-                </i>Dropdowns
+                </i>User Account
               </a>
             </li>
             <li>
@@ -97,7 +101,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <!--li>
           <a href="#">
             <i class="metismenu-icon pe-7s-car"></i>
             Components
@@ -193,7 +197,7 @@
           </a>
         </li>
         <li>
-          <a href="forms-layouts.html" class="mm-active">
+          <a href="forms-layouts.html" class="">
             <i class="metismenu-icon pe-7s-eyedropper">
             </i>Forms Layouts
           </a>
@@ -218,7 +222,7 @@
             </i>
             Upgrade to PRO
           </a>
-        </li>
+        </li-->
       </ul>
     </div>
   </div>

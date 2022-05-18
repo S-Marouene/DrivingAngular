@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './components/guard/auth.guard';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
 import { ListUserComponent } from './components/ListUsers/list-user/list-user.component';
 import { MainComponentComponent } from './components/main/main-component/main-component.component';
 import { SigninComponent } from './components/signin/signin.component';
@@ -11,21 +12,15 @@ const routes: Routes = [
 
     {path: 'login', component: SigninComponent},
     {path: 'register', component: SignupComponent},
-    {path: '', component: MainComponentComponent,
+    {path: '', component: MainComponentComponent,canActivate: [AuthGuard],
       children: [
-
-        { path: 'listuser', component: ListUserComponent },
-        { path: 'profile', component: UserProfileComponent }
+        { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+        { path: 'listuser', component: ListUserComponent,canActivate: [AuthGuard] },
+        { path: 'profile', component: UserProfileComponent },
+        { path: 'dashboard', component: DashboardComponent }
     ]}];
 
 
-
-  /*{ path: '', component: UserProfileComponent, canActivate: [AuthGuard] },
-  { path: 'register', component: SignupComponent },
-  { path: 'profile', component: UserProfileComponent },
-  { path: 'listuser', component: ListUserComponent },
-
-];*/
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

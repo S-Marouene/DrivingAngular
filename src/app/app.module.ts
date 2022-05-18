@@ -13,6 +13,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { ListUserComponent } from './components/ListUsers/list-user/list-user.component';
 import { MainComponentComponent } from './components/main/main-component/main-component.component';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { MainComponentComponent } from './components/main/main-component/main-co
     MenuComponent,
     ListUserComponent,
     MainComponentComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
