@@ -14,6 +14,7 @@ import { MenuComponent } from './components/layout/menu/menu.component';
 import { ListUserComponent } from './components/ListUsers/list-user/list-user.component';
 import { MainComponentComponent } from './components/main/main-component/main-component.component';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+import { TableOfUserComponent } from './components/user/list/table-of-user/table-of-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { DashboardComponent } from './components/layout/dashboard/dashboard.comp
     ListUserComponent,
     MainComponentComponent,
     DashboardComponent,
+    TableOfUserComponent,
   ],
   imports: [
     BrowserModule,
