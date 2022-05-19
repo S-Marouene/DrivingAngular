@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from './components/guard/auth.guard';
+import { AuthGuard } from './components/auth/guard/auth.guard';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
-import { ListUserComponent } from './components/ListUsers/list-user/list-user.component';
+import { ListUserComponent } from './components/user/list-user/list-user.component';
 import { MainComponentComponent } from './components/main/main-component/main-component.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 const routes: Routes = [
 
 

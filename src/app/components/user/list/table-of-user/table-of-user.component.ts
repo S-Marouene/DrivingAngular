@@ -13,4 +13,8 @@ export class TableOfUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showDetails(actualUser:User){
+    console.log(actualUser)
+  }
+
 }
