@@ -1,0 +1,55 @@
+<div class="card-body" *ngIf="user">
+  <h5 class="card-title">User Détails</h5>
+
+  <div class="form-row">
+    <div class="col-md-6">
+      <div class="position-relative form-group"><label for="exampleEmail11" class="">E-mail
+        </label><input value="{{user?.email}}" type="email" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="position-relative form-group"><label for="examplePassword11" class="">Password</label><input
+        placeholder="********" type="password" class="form-control"></div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6">
+      <div class="position-relative form-group"><label for="exampleAddress2" class="">FirstName</label><input
+        value="{{user?.firstname}}" type="text"
+          class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="position-relative form-group"><label for="exampleAddress2" class="">Name</label><input
+        value="{{user?.name}}" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="position-relative form-group"><label for="exampleAddress" class="">Address</label><input name="address"
+      id="exampleAddress" placeholder="1234 Main St" type="text" class="form-control"></div>
+
+  <div class="form-row">
+    <div class="col-md-6">
+      <div class="position-relative form-group"><label for="exampleCity" class="">City</label><input name="city"
+          id="exampleCity" type="text" class="form-control"></div>
+    </div>
+    <div class="col-md-4">
+      <div class="position-relative form-group"><label for="exampleState" class="">State</label><input name="state"
+          id="exampleState" type="text" class="form-control"></div>
+    </div>
+    <div class="col-md-2">
+      <div class="position-relative form-group"><label for="exampleZip" class="">Zip</label><input name="zip"
+          id="exampleZip" type="text" class="form-control"></div>
+    </div>
+  </div>
+
+
+  <div class="d-block text-center card-footer">
+    <button class="mr-2 btn-icon btn-icon-only btn btn-danger"><i class="pe-7s-trash btn-icon-wrapper">Delete
+      </i></button>
+    <button class="btn-wide btn btn-success">Update</button>
+  </div>
+
+
+</div>

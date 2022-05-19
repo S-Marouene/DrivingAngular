@@ -13,18 +13,12 @@ export class UserService {
   private selectedUserSubject = new Subject<User>();
   selectItem$ = this.selectedUserSubject.asObservable();
 
+
+
   private users: User[] = [
-    new User(1, 39, 'marouene', 'ssaidi', 'Developper', '   job  ', '1234'),
-    new User(
-      2,
-      3,
-      'skander',
-      'sellaouti',
-      'tgangin',
-      'rotating_card_profile3.png',
-      '7'
-    ),
-    new User(3, 3, 'skander', 'sellaouti', 'tgangin', '', '7'),
+    new User(1, 39, 'Marouene', 'Saidi', 'Developper', 'logoprofil.jpg', '96581234','saidi.marouen@gmail.com','super-admin','31/01/2021'),
+    new User(1, 39, 'med', 'abess', 'dont no ', 'logoprofil.jpg', '1234654','abess@gmail.com','admin','02/01/2020'),
+    new User(1, 39, 'ali', 'salah', 'Other', 'logoprofil.jpg', '1234741','ali5441@gmail.com','visitor','16/01/2021'),
   ];
 
   constructor(private http: HttpClient) { }

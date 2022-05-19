@@ -12,10 +12,11 @@ const routes: Routes = [
 
     {path: 'login', component: SigninComponent},
     {path: 'register', component: SignupComponent},
-    {path: '', component: MainComponentComponent,canActivate: [AuthGuard],
+    //canActivate: [AuthGuard] add to path for obligation auth in prod
+    {path: '', component: MainComponentComponent,
       children: [
         { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-        { path: 'listuser', component: ListUserComponent,canActivate: [AuthGuard] },
+        { path: 'listuser', component: ListUserComponent },
         { path: 'profile', component: UserProfileComponent },
         { path: 'dashboard', component: DashboardComponent }
     ]}];

@@ -15,6 +15,8 @@ import { ListUserComponent } from './components/user/list-user/list-user.compone
 import { MainComponentComponent } from './components/main/main-component/main-component.component';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
 import { TableOfUserComponent } from './components/user/list/table-of-user/table-of-user.component';
+import { UserdetailsComponent } from './components/user/UserDetails/userdetails/userdetails.component';
+import { DefaultImagePipe } from './components/user/pipe/default-image.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { TableOfUserComponent } from './components/user/list/table-of-user/table
     ListUserComponent,
     MainComponentComponent,
     DashboardComponent,
-    TableOfUserComponent
+    TableOfUserComponent,
+    UserdetailsComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

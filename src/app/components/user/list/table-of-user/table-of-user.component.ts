@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../../model/user';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-table-of-user',
@@ -8,13 +9,14 @@ import { User } from '../../model/user';
 })
 export class TableOfUserComponent implements OnInit {
   @Input() users: User[] = [];
-  constructor() { }
+  @Input() actualUser: User | null = null;
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
   }
 
-  showDetails(actualUser:User){
-    console.log(actualUser)
+  sendDetails(actualUser:User){
+    if (actualUser) this.userService.GetSelectedUser(actualUser);
   }
 
 }

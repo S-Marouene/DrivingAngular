@@ -28,14 +28,6 @@ export class SigninComponent implements OnInit {
   onSubmit() {
     const form=this.loginForm.value ;
 
-
-    if(form['email']=='demo@demo.com' && form['password']=='demodemo'){
-
-      this.authState.setAuthState(true);
-      this.loginForm.reset();
-      this.router.navigate(['profile']);
-
-    }else {
       this.authService.signin(this.loginForm.value).subscribe(
         (result) => {
           this.responseHandler(result);
@@ -51,12 +43,18 @@ export class SigninComponent implements OnInit {
           });
         }
       );
-    }
-
   }
   // Handle response
   responseHandler(data:any) {
     console.log(data.access_token);
     this.token.handleData(data.access_token);
+  }
+
+  DemoLogin(){
+    this.authState.setAuthState(true);
+      this.loginForm.reset();
+      this.router.navigate(['']).then(() => {
+        window.location.reload();
+      });
   }
 }
