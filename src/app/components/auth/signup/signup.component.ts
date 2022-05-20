@@ -21,6 +21,7 @@ export class SignupComponent implements OnInit {
       password: [''],
       password_confirmation: [''],
       role: ['VISITEUR'],
+      path: [''],
     });
   }
   ngOnInit() {}

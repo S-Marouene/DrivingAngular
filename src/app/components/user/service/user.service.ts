@@ -35,4 +35,9 @@ export class UserService {
     this.selectedUserSubject.next(user);
   }
 
+  deleteUserService(id:number): Observable<any> {
+
+    return this.http.delete<any>(API.deleteUsers + id /* {params} */);
+  }
+
 }
