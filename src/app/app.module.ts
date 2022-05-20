@@ -17,6 +17,7 @@ import { DashboardComponent } from './components/layout/dashboard/dashboard.comp
 import { TableOfUserComponent } from './components/user/list/table-of-user/table-of-user.component';
 import { UserdetailsComponent } from './components/user/UserDetails/userdetails/userdetails.component';
 import { DefaultImagePipe } from './components/user/pipe/default-image.pipe';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,11 +42,8 @@ import { DefaultImagePipe } from './components/user/pipe/default-image.pipe';
     FormsModule,
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
+    {provide: HTTP_INTERCEPTORS,useClass: AuthInterceptor,multi: true},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent],
 })
